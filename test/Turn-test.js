@@ -31,6 +31,9 @@ describe('Turn', function() {
     turn.evaluateGuess();
     expect(turn.evaluateGuess()).to.equal(true);
   })
-
+  it.skip('Should have a method that returns either ‘incorrect!’ or ‘correct!’ based on whether the guess is correct or not', function() {
+    turn.evaluateGuess();
+    expect(turn.giveFeedback()).to.equal('correct!');
+  })
 
 });
