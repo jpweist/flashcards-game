@@ -1,32 +1,28 @@
 
 class Turn {
-  constructor(userGuess, currentCard) {
-    this.userGuess = userGuess;
-    this.currentCard = currentCard;
+  constructor(guess, cardObj) {
+    this.guess = guess;
+    this.card = cardObj;
   }
   returnGuess() {
-    return this.userGuess;
+    return this.guess;
   }
   returnCard() {
-    return this.currentCard;
+    return this.card;
   }
   evaluateGuess() {
-    if (this.userGuess === this.currentCard.correctAnswer) {
-      this.giveFeedback(true);
+    if (this.guess === this.card.correctAnswer) {
       return true;
     }
-    if (this.userGuess !== this.currentCard.correctAnswer) {
-      this.giveFeedback(false);
+    else {
       return false;
     }
   }
-  giveFeedback(guessIn) {
-    // console.log(guessIn)
-    if (guessIn === true) {
+  giveFeedback() {
+    if (this.evaluateGuess()) {
       return 'correct!';
     }
     else {
-      console.log(guessIn);
       return 'incorrect!';
     }
   }
@@ -53,20 +49,3 @@ module.exports = Turn;
 // returnCard: method that returns the Card
 // evaluateGuess: method that returns a boolean indicating if the user’s guess matches the correct answer on the card
 // giveFeedback - method that returns either ‘incorrect!’ or ‘correct!’ based on whether the guess is correct or not.
-
-
-// evaluateGuess() {
-//   if (this.guess === this.card.correctAnswer) {
-//     // console.log(this.card);
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
-// giveFeedback() {
-//   if (this.guess === this.card.correctAnswer) {
-//     return 'correct!';
-//   } else {
-//     return 'incorrect!';
-//   }
-// }

@@ -10,8 +10,8 @@ describe('Turn', function() {
   beforeEach(() => {
     guessRight = "object";
     guessWrong = "function";
-    turn = new Turn(guessRight, card);
     card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+    turn = new Turn(guessRight, card);
   });
 
   it('Should be an instance of turn', function() {
@@ -20,7 +20,7 @@ describe('Turn', function() {
 
   it('Should have a method that returns the guess', function() {
     turn.returnGuess();
-    expect(turn.returnGuess()).to.equal("object")
+    expect(turn.returnGuess()).to.deep.equal("object")
   })
 
   it('Should have a method that returns the Card', function() {
@@ -28,11 +28,11 @@ describe('Turn', function() {
     expect(turn.returnCard()).to.deep.equal(card)
   })
   it('Should have a method that returns a boolean indicating if the user’s guess matches the correct answer on the card', function() {
-    turn.evaluateGuess();
+    turn.evaluateGuess("object");
     expect(turn.evaluateGuess()).to.equal(true);
   })
-  it.skip('Should have a method that returns either ‘incorrect!’ or ‘correct!’ based on whether the guess is correct or not', function() {
-    turn.evaluateGuess();
+  it('Should have a method that returns either ‘incorrect!’ or ‘correct!’ based on whether the guess is correct or not', function() {
+    turn.evaluateGuess("object");
     expect(turn.giveFeedback()).to.equal('correct!');
   })
 
