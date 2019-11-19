@@ -53,3 +53,20 @@ module.exports = Turn;
 // returnCard: method that returns the Card
 // evaluateGuess: method that returns a boolean indicating if the user’s guess matches the correct answer on the card
 // giveFeedback - method that returns either ‘incorrect!’ or ‘correct!’ based on whether the guess is correct or not.
+
+
+// evaluateGuess() {
+//   if (this.guess === this.card.correctAnswer) {
+//     // console.log(this.card);
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// giveFeedback() {
+//   if (this.guess === this.card.correctAnswer) {
+//     return 'correct!';
+//   } else {
+//     return 'incorrect!';
+//   }
+// }
