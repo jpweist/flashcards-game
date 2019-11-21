@@ -23,8 +23,18 @@ describe('Game', function() {
     round = new Round(deck);
     turn = new Turn(guessRight, card1);
     game = new Game(round);
+    game.currentRound = round;
+    // game.printMessage(deck, round);
+    // game.printQuestion(round);
   });
-  it('Should keep track of the currentRound', function() {
 
+  it('Should keep track of the currentRound', function() {
+    expect(game.currentRound).to.deep.equal(round);
   })
+  it.skip('Should printMessage to display the message in the CLI', function() {
+    expect(game.printMessage()).to.equal(deck, round)
+  });
+  it.skip('should printQuestion to kick off our helper functions that allow interaction via the CLI', function() {
+    expect(game.printQuestion()).to.equal(card1.question)
+  });
 });

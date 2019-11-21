@@ -21,6 +21,18 @@ class Game {
   printQuestion(round) {
       util.main(round);
   }
+  start() {
+    let cards = [];
+    prototypeQuestions.forEach((cardData) => {
+     const card = new Card(cardData.id, cardData.question, cardData.answers, cardData.correctAnswer);
+     cards.push(card);
+   });
+   const deck = new Deck(cards);
+   const round = new Round(deck);
+   this.currentRound = round;
+   this.printMessage(deck, round);
+   this.printQuestion(round);
+  }
 
 }
 
@@ -29,6 +41,7 @@ module.exports = Game;
 // Your Game class should meet these other requirements:
 
 // Should keep track of the currentRound
+
 // start: method that starts everything
 // Creates Cards
 // Puts Cards in a Deck
