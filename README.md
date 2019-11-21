@@ -8,9 +8,9 @@ The FlashCards game is a one player game run at the command line. The game stars
 The project was about TDD test driven development. Using Test to guide the development of the the project. Building tests and the classes that went with those were the focus of the project.
 
 ## Game
-![]()
+![](https://github.com/jpweist/flashcards-game/blob/master/images/flash-cards.gif)
 
-![]()
+![](https://github.com/jpweist/flashcards-game/blob/master/images/flashcards.png)
 
 
 ## Installation
