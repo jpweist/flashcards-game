@@ -49,7 +49,7 @@ describe('Round', function() {
   it('should have incorrect guesses will be stored (via the id) in an array of incorrectGuesses', function() {
     round.takeTurn(guessWrong, card1);
     // console.log(round.incorrectGuesses[0])
-    expect(round.incorrectGuesses[0]).to.deep.equal(2)
+    expect(round.incorrectGuesses[0]).to.equal(card2)
   });
   it('should have feedback is returned regarding whether the guess is incorrect or correct', function() {
     round.takeTurn(guessWrong, card1);
